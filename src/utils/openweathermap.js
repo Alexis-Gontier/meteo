@@ -17,8 +17,10 @@ export function openweathermap(city) {
     const { data: forecastData, error: forecastError } = useSWR(forecastUrl, fetcher);
 
     return {
+        // data:
         weatherData,
         forecastData,
+        // error:
         weatherError,
         forecastError,
     };
