@@ -2,6 +2,8 @@
 
 import { useParams } from 'next/navigation';
 import { openweathermap } from '../../../utils/openweathermap';
+import Square from '../../../components/meteo/Square';
+import Rectangle from '@/components/meteo/Rectangle';
 
 export default function Page() {
 
@@ -21,6 +23,10 @@ export default function Page() {
             <h1>Météo pour {weatherData.name}</h1>
             <p>1- {weatherData.weather[0].description}</p>
             <p>2- {forecastData.list[0].weather[0].description}</p>
+            <div className='flex flex-col items-center gap-3 max-w-3xl mx-auto'>
+                <Square data={weatherData} />
+                <Rectangle data={forecastData} />
+            </div>
         </div>
     );
 }
