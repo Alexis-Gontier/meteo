@@ -1,7 +1,9 @@
+import Link from 'next/navigation';
+
 export default function Home() {
   return (
     <div>
-      Home
+      <Link hrf="/meteo/montrouge">Meteo: Montrouge</Link>
     </div>
   );
 }
