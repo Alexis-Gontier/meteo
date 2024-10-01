@@ -8,7 +8,7 @@ const fetcher = (url) => fetch(url).then((res) => {
 
 export function openweathermap(city) {
 
-    const apiKey = '7fcd6ddef320c05ac490285b4549c7f7';
+    const apiKey = '';
 
     const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=fr`;
     const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric&lang=fr`;
